@@ -17,9 +17,9 @@ But this is just our story. Were people in other parts of the world affected in 
 Here’s the plan: we’ll examine how regional and global film industries have been succesfull in movie theatres, exploring the impact of economic and population shifts on box office revenues. We’ll also investigate the most significant events of the last century to understand their influence on cinema across different countries. Then comes the exciting part: analyzing how domestic and international box office trends vary by country. Finally, we’ll explore genres: how they’ve developed over time and how they compare to global patterns.
 <br/>
 <section>
- <h3>
+ <h2>
   DATASET ANALYSIS:
- </h3>
+ </h2>
 </section>
 <br/>
 So, to figure all this out, we started with the MovieSummary dataset. Pretty solid stuff, but we realized it needed a little extra spice. That’s when we decided to beef it up with some juicy data scraped from BoxOfficeMojo and TheNumbers. Because, let’s face it, the more data, the better.
@@ -49,7 +49,8 @@ To get a better sense of the global film landscape, we grouped countries by thei
 </em>
 <br/>
 <br/>
-We decided to focus our analysis on 1960 and later. Why? Because that’s when the data became significantly more reliable. Earlier years were like trying to piece together a movie from a damaged reel—frustratingly incomplete. Moreover, excluding those earlier years had no impact on the overall trends, making 1960 the logical starting point. Examining the changes in movie production over time further reinforced this choice. Before 1960, the data was inconsistent due to insufficient record-keeping and incomplete datasets. However, post-1960, production began to increase steadily, and the trends became far more apparent, providing us with a solid foundation for meaningful analysis.
+For the following analysis using GDP and population data, we will restrain our dataset to movies produced after 1960. This is due to the fact that we do not have data on GDP and population for our countries for years prior to 1960.
+Moreover, when analyzing the distribution of movies by release years, we observed that most of the movies in the dataset were released after 1960, so it should not impact our results too much.
 <br/>
 <br/>
 To ensure our study captured a global perspective, we narrowed our focus to 16 countries that best represented the evolution of cinema. These countries offered the most consistent data and included at least two from each continent, ensuring a balanced and comprehensive view.
@@ -58,9 +59,14 @@ To ensure our study captured a global perspective, we narrowed our focus to 16 c
 That’s how we prepped the stage for our deep dive into cinema trends. Ready to roll? Lights, camera, action! 🎬
 <br/>
 <section>
- <h3>
-  HOW WERE SELECTED COUNTRIES' NATIONAL CINEMATOGRAPHIC INDUSTRIES DIFFERENTLY IMPACTED BY EXTERNAL FACTORS?
- </h3>
+ <h2>
+    How did external factors impact the national film industries of selected countries?
+ </h2>
+</section>
+<section>
+<h4>
+ GDP and population 
+</h4>
 </section>
 <br/>
 One can ask oneself what could influence a national film industry’s production. Mhhh... money, of course! 💸 The most obvious way to connect a country's economy to its film industry is by checking out its GDP over time. But wait – maybe demographics matter too? We thought about population growth and threw it into the mix. And if you keep brainstorming, you hit the jackpot: historical, cultural, and technological events. Alright, let's roll the reel back to the main plot!
@@ -87,6 +93,11 @@ Finally, we can also observe some surprising results:
 We then try to predict the national box office revenue (for each of our countries) trends over time using GDP and population data. We can observe that GDP and population data predict revenues well in developed markets like the United States (R² = 0.88) and the United Kingdom (R² = 0.79), but fail in emerging markets like Nigeria (R² = 0.14) and Argentina (R² = 0.10). This supports our previous assumptions stated when analyzing the Spearman correlations between national box office revenue and GDP resp population.
 <br/>
 <img src="assets/img/plotmeanrevenuewithevents.png"/>
+<section>
+<h4>
+The Influence of Events
+</h4>
+</section>
 And now, the grand finale: the timeline that overlays significant cultural, technological, and historical events with movie revenue trends.
 <br/>
 <b>
@@ -119,22 +130,22 @@ Starting in the 1950s, the revenue trends stabilize and gradually rise, which co
 <br/>
 To do this, we perform a KS test (Kolgomorov - Smirnov test) where we compare whether the worldwide box office revenue distribution for movies post-Covid differs significantly from the pre-Covid distribution for each country. Specifically, the alternative hypothesis (alternative='less') checks if post-Covid revenues are stochastically smaller than pre-Covid revenues. A significant p-value (smaller than 0.05) would suggest that the worldwide revenues post-Covid are lower than pre-Covid for the given country whereas if the p-value is higher than this threshold, we fail to reject the null hypothesis, meaning there is no evidence that revenues have decreased post-Covid compared to pre-Covid.
 <br/>
-Germany and France show significant shifts in their revenue distributions (p smaller than 0.05), suggesting Covid had a measurable impact on their box office performance. However, most other countries with already well developed movie industries(including USA, UK, Canada, Japan, Australia) show no significant difference (p &gt; 0.05), indicating consistent box office trends pre- and post-Covid. Countries like South Korea, New Zealand, and India exhibit moderate to high test statistics but lack statistical significance, likely due to the lack of data unaccounted variability. Similarly, we obtain very low test statistics with high p value in the case of countries like Nigeria and Argentina which is also likely caused by the lack of data.
+Germany and France show significant shifts in their revenue distributions (p smaller than 0.05), suggesting Covid had a measurable impact on their box office performance. However, most other countries with already well developed movie industries(including USA, UK, Canada, Japan, Australia) show no significant difference (p &gt; 0.05), indicating consistent box office trends pre- and post-Covid. Countries like South Korea and India exhibit moderate to high test statistics but lack statistical significance, likely due to the lack of data unaccounted variability. Similarly, we obtain very low test statistics with high p value in the case of countries like Nigeria and Argentina which is also likely caused by the lack of data.
 <br/>
 For countries with well developed movie industries, the results of our test seem coherent : 
     - In the case of France and Germany we observe that those countries show significant shifts in revenue distributions post-Covid, which is plausible given their strict lockdown measures and cultural preferences for local cinema. Indeed, those countries and especially France are known to have robust local film industries, and the pandemic might have disrupted its production and audience engagement.  Moreover, European countries also faced prolonged restrictions, which may have delayed box office recovery.
     - In the case of USA, Australia, UK, Canada, ect where we observed no significant difference in revenue distributions pre and post Covid, it is quite coherent since these markets often rely heavily on Hollywood blockbusters, which adapted quickly post-Covid (for example they had simultaneous streaming releases and also the big-budget productions are resuming faster). The moderate test statistics and non-significant p-values align with their ability to recover quickly compared to other markets. 
     - In the case of Japan, it had relatively successful Covid-19 management early on and reopened cinemas sooner than other regions which could explain their national box office revenue stability.
 <section>
- <h3>
+ <h2>
   The Big Picture 🎥🍿
- </h3>
+ </h2>
 </section>
 Together, these graphs reveal how economies, populations, and history shape the movie industry. Money and history are like the big bosses pulling the strings, while tech acts as the wildcard. Population? Maybe a side character. Emerging markets like Nollywood and K-dramas keep the plot exciting, while Hollywood sticks to its predictable blockbusters. Just like a great film, the industry keeps evolving—and there’s always room for a surprise twist. 🍿
 <section>
- <h3>
+ <h4>
   EXPLORING HOW A COUNTRY'S MOST POPULAR GENRES RELATE TO FILM EXPORTATION OR DOMESTIC RETENTION
- </h3>
+ </h4>
 </section>
 Movies are more than just entertainment – they reveal a lot about what people enjoy watching and how far those stories travel. Some countries embrace their local films, creating a thriving domestic market. Others dominate globally, exporting their films to captivate audiences worldwide. So, what does this mean for genres and revenue? Let’s dive in.
 <div class="container">
@@ -151,5 +162,10 @@ In stark contrast, the U.S. and U.K. have mastered the art of global appeal, wit
 Genres vary significantly by country, reflecting the unique cultural and storytelling traditions of each region. In China, for example, audiences demonstrate a clear preference for “Chinese Movies,” a category that represents the country’s rich cinematic heritage. Drama and World Cinema also feature prominently, underscoring a commitment to showcasing stories that resonate with local values and perspectives. The U.S. and U.K., by contrast, dominate with global hits that include Action, Drama, and Comedy. Their films are designed to be universally accessible, featuring superheroes, emotionally charged narratives, and humor that transcends language barriers. In France, there is a notable preference for Drama and World Cinema, reflecting the French appetite for artistic and culturally nuanced storytelling. Australia and Canada offer a balance, blending local storytelling with globally popular genres like Comedy and Action, allowing them to cater to both domestic audiences and international markets. Across the globe, some nations prioritize their cultural roots, while others adapt to appeal to audiences worldwide, resulting in an intriguing tapestry of film preferences.
 <img src="assets/img/plotgenrewithevents.png"/>
 Cinema has always mirrored the world’s historical and cultural shifts, with significant events shaping the evolution of genres over time. During and after World War II, there was a marked increase in Documentaries and War Dramas, as filmmakers sought to document and process the turmoil of the era. These genres captured the collective need to reflect on and make sense of a rapidly changing world. In the Baby Boom era, Comedy and Family Films surged in popularity, providing audiences with lighthearted escapism during a time of optimism and domestic stability. The 1960s brought the New Wave Movement, a period of artistic experimentation that saw the rise of Drama and Crime Fiction, as directors pushed boundaries and redefined cinematic storytelling. The advent of the Digital Revolution in the 2000s marked another turning point, with technological advancements in CGI fueling the dominance of Action and Adventure films, genres that continue to command international appeal. Most recently, the COVID-19 pandemic brought its own influence, leading to a resurgence of Documentaries and Horror. These genres, in many ways, reflected societal anxieties while also addressing a renewed interest in exploring real-world issues and fears. Cinema evolves alongside history, its genres ebbing and flowing to capture the spirit of each era, proving that movies are as much a reflection of their time as they are a form of entertainment.
-<h3>Conclusion</h3>
-Faire une conclusion
+<section>
+ <h3>CONCLUSION</h3>
+</section>
+<br>
+By exploring global cinema trends, we’ve uncovered how national film industries evolve in response to economic shifts, population dynamics, and historical milestones. From Hollywood's global dominance to Nollywood's rise, cinema reflects the complex interplay of culture, technology, and traditions. Some countries focus on their local audience, while others produce stories that resonate around the globe, creating a rich and varied cinematic world. In the end, films reflect our world, with their genres and success closely connected to the societies that make and watch them.
+
+<br><br>And so, our exploration comes to its closing act. 🎬✨
