@@ -8,7 +8,7 @@ Movies are everywhere, reflecting and shaping culture globally. Today, it’s ea
 <br/>
 But how did we get here? It all started back in 1895 when these two French guys, Les Frères Lumière, decided it’d be cool to project moving pictures in public. Fast forward through history, and here we are. Our grandparents? They sat through war propaganda at the theaters. Our parents? They saw the dawn of CGI with legendary franchises like Star Wars, Indiana Jones, and Jurassic Park. And us? Well, we lived through COVID lockdowns, binge-watching entire seasons of shows in one weekend. Cinema has had its ups and downs, but it’s more alive than ever.
 <br/>
-<img src="assets/img/meme1.jpg"/>
+<img src="assets/img/meme.gif"/>
 <br/>
 <br/>
 But this is just our story. Were people in other parts of the world affected in the same way? How have their cinema-going habits evolved? And what has been the impact on their local film industries?
@@ -41,14 +41,13 @@ The first map we look at show us that the U.S. basically invented the blockbuste
 To get a better sense of the global film landscape, we grouped countries by their continents to see how each contributes to the industry. The plot illustrates the influence of regions like Hollywood in North America, Bollywood in Asia, and other key players around the world. From this, we focused on the top contributors in each continent to ensure our data is as accurate and representative as possible. Think of it as picking the standout stars of the global movie stage.
 <br/>
 <div class="container">
- <iframe class="responsive-iframe" src="assets/distrib_years.html">
+ <iframe class="responsive-iframe" src="assets/html/distrib_years.html">
  </iframe>
 </div>
 
 <div class="container">
-    <iframe class="responsive-iframe" src="assets/distrib_boxoffice.html">
-    </iframe>
-   </div>
+    <iframe class="responsive-iframe" src="assets/html/distrib_boxoffice.html"></iframe>
+</div>
 <em>
  *A KDE (Kernel Density Estimate) is like a smooth line that hugs the bars of a histogram, whispering, “Relax, I got this,” as it tries to show the overall trend more elegantly.
 </em>
@@ -92,7 +91,9 @@ Finally, we can also observe some surprising results:
 -For Hong Kong, the low correlation values (0.31 for GDP and 0.30 for population) could suggest that the local film industry faces intense competition from neighboring regions, such as Mainland China, South Korea, and Japan. Despite its historical significance in cinema, the market may be saturated or heavily influenced by external content, limiting the direct impact of GDP and population size on domestic film revenue.
 <br/>
 <br/>
-<img src="assets/html/r2_score.html"/>
+<div class="container">
+    <iframe class="responsive-iframe" src="assets/html/r2_score.html"></iframe>
+</div>
 <em>*R² tells you how well a model's predictions match the real data. If R² is 1, the predictions are perfect. If it’s 0, the predictions are completely wrong and don't help at all. It’s like asking, "How much does this model actually explain what’s going on?"</em>
 <br/>
 <br/>
@@ -136,7 +137,9 @@ Starting in the 1950s, the revenue trends stabilize and gradually rise, which co
 <br/>
 To do this, we perform a KS test (Kolgomorov - Smirnov test) where we compare whether the worldwide box office revenue distribution for movies post-Covid differs significantly from the pre-Covid distribution for each country. Specifically, the alternative hypothesis (alternative='less') checks if post-Covid revenues are stochastically smaller than pre-Covid revenues. A significant p-value (smaller than 0.05) would suggest that the worldwide revenues post-Covid are lower than pre-Covid for the given country whereas if the p-value is higher than this threshold, we fail to reject the null hypothesis, meaning there is no evidence that revenues have decreased post-Covid compared to pre-Covid.
 <br/>
-<img src="assets/html/ks_test.html"/>
+<div class="container">
+    <iframe class="responsive-iframe" src="assets/html/ks_test.html"></iframe>
+</div>
 Germany and France show significant shifts in their revenue distributions (p smaller than 0.05), suggesting Covid had a measurable impact on their box office performance. However, most other countries with already well developed movie industries(including USA, UK, Canada, Japan, Australia) show no significant difference (p &gt; 0.05), indicating consistent box office trends pre- and post-Covid. Countries like South Korea and India exhibit moderate to high test statistics but lack statistical significance, likely due to the lack of data unaccounted variability. Similarly, we obtain very low test statistics with high p value in the case of countries like Nigeria and Argentina which is also likely caused by the lack of data.
 <br/>
 For countries with well developed movie industries, the results of our test seem coherent : 
@@ -156,15 +159,13 @@ Together, these graphs reveal how economies, populations, and history shape the 
 </section>
 Movies are more than just entertainment – they reveal a lot about what people enjoy watching and how far those stories travel. Some countries embrace their local films, creating a thriving domestic market. Others dominate globally, exporting their films to captivate audiences worldwide. So, what does this mean for genres and revenue? Let’s dive in.
 <div class="container">
- <iframe class="responsive-iframe" src="assets/html/domestic_international.html">
- </iframe>
+ <iframe class="responsive-iframe" src="assets/html/domestic_international.html"></iframe>
 </div>
 In countries like India and Nigeria, local audiences have a strong preference for homegrown films, and it shows at the box office. Domestic revenues often rival or exceed international earnings, demonstrating that these films primarily stay within national borders. India, for instance, sees Bollywood films thriving with their characteristic blend of Drama, Romance, and Musical numbers. These genres are deeply rooted in local culture, appealing strongly to Indian audiences but often not translating as well globally. Similarly, in Nigeria, Nollywood dominates with relatable Family Dramas and Romantic Comedies. These films cater to the tastes of their domestic viewers, reinforcing a powerful local market.
 <br/>
 In stark contrast, the U.S. and U.K. have mastered the art of global appeal, with their films flourishing internationally. Hollywood productions, with their emphasis on Action-packed blockbusters featuring Superheroes and Explosions, seem tailor-made for universal audiences. Their themes and styles resonate across cultures, securing dominance at the global box office. Meanwhile, the U.K. has carved a niche with its export of Period Dramas, Thrillers, and quirky Comedies. These genres, often tied to British cultural identity or eccentricity, manage to charm audiences far beyond national borders. Some countries focus on satisfying local tastes with culturally specific genres, while others emphasize universal themes that ensure international success.
 <div class="container">
- <iframe class="responsive-iframe" src="assets/html/top_3_genres.html">
- </iframe>
+ <iframe class="responsive-iframe" src="assets/html/top_3_genres.html"></iframe>
 </div>
 Genres vary significantly by country, reflecting the unique cultural and storytelling traditions of each region. In China, for example, audiences demonstrate a clear preference for “Chinese Movies,” a category that represents the country’s rich cinematic heritage. Drama and World Cinema also feature prominently, underscoring a commitment to showcasing stories that resonate with local values and perspectives. The U.S. and U.K., by contrast, dominate with global hits that include Action, Drama, and Comedy. Their films are designed to be universally accessible, featuring superheroes, emotionally charged narratives, and humor that transcends language barriers. In France, there is a notable preference for Drama and World Cinema, reflecting the French appetite for artistic and culturally nuanced storytelling. Australia and Canada offer a balance, blending local storytelling with globally popular genres like Comedy and Action, allowing them to cater to both domestic audiences and international markets. Across the globe, some nations prioritize their cultural roots, while others adapt to appeal to audiences worldwide, resulting in an intriguing tapestry of film preferences.
 <img src="assets/img/plotgenrewithevents.png"/>
