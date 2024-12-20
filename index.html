@@ -8,7 +8,9 @@ Movies are everywhere, reflecting and shaping culture globally. Today, it’s ea
 <br/>
 But how did we get here? It all started back in 1895 when these two French guys, Les Frères Lumière, decided it’d be cool to project moving pictures in public. Fast forward through history, and here we are. Our grandparents? They sat through war propaganda at the theaters. Our parents? They saw the dawn of CGI with legendary franchises like Star Wars, Indiana Jones, and Jurassic Park. And us? Well, we lived through COVID lockdowns, binge-watching entire seasons of shows in one weekend. Cinema has had its ups and downs, but it’s more alive than ever.
 <br/>
-<img src="assets/img/meme.gif"/>
+<div style="text-align: center;">
+    <img src="assets/img/meme.gif">
+</div>
 <br/>
 <br/>
 But this is just our story. Were people in other parts of the world affected in the same way? How have their cinema-going habits evolved? And what has been the impact on their local film industries?
@@ -18,7 +20,7 @@ Here’s the plan: we’ll examine how regional and global film industries have 
 <br/>
 <section>
  <h2>
-  DATASET ANALYSIS:
+  Dataset Analysis
  </h2>
 </section>
 <br/>
@@ -52,13 +54,13 @@ To get a better sense of the global film landscape, we grouped countries by thei
  *A KDE (Kernel Density Estimate) is like a smooth line that hugs the bars of a histogram, whispering, “Relax, I got this,” as it tries to show the overall trend more elegantly.
 </em>
 <br/>
-<br/>
-For the following analysis using GDP and population data, we will restrain our dataset to movies produced after 1960. This is due to the fact that we do not have data on GDP and population for our countries for years prior to 1960.
-Moreover, when analyzing the distribution of movies by release years, we observed that most of the movies in the dataset were released after 1960, so it should not impact our results too much.
-<br/>
+
 <br/>
 To ensure our study captured a global perspective, we narrowed our focus to 16 countries that best represented the evolution of cinema. These countries offered the most consistent data and included at least two from each continent, ensuring a balanced and comprehensive view.
 <br/>
+<div class="container">
+<iframe class ="responsive-iframe" src="assets/html/yearly_boxoffice_country.html"></iframe>
+</div>
 <br/>
 That’s how we prepped the stage for our deep dive into cinema trends. Ready to roll? Lights, camera, action! 🎬
 <br/>
@@ -74,6 +76,10 @@ That’s how we prepped the stage for our deep dive into cinema trends. Ready to
 </section>
 <br/>
 One can ask oneself what could influence a national film industry’s production. Mhhh... money, of course! 💸 The most obvious way to connect a country's economy to its film industry is by checking out its GDP over time. But wait – maybe demographics matter too? We thought about population growth and threw it into the mix. And if you keep brainstorming, you hit the jackpot: historical, cultural, and technological events. Alright, let's roll the reel back to the main plot!
+<br/>
+<br/>
+For the following analysis using GDP and population data, we will restrain our dataset to movies produced after 1960. This is due to the fact that we do not have data on GDP and population for our countries for years prior to 1960.
+Moreover, when analyzing the distribution of movies by release years, we observed that most of the movies in the dataset were released after 1960, so it should not impact our results too much.
 <br/>
 <br/>
 <img src="assets/img/gdp_population_revenue.png"/>
@@ -147,15 +153,15 @@ For countries with well developed movie industries, the results of our test seem
     - In the case of USA, Australia, UK, Canada, ect where we observed no significant difference in revenue distributions pre and post Covid, it is quite coherent since these markets often rely heavily on Hollywood blockbusters, which adapted quickly post-Covid (for example they had simultaneous streaming releases and also the big-budget productions are resuming faster). The moderate test statistics and non-significant p-values align with their ability to recover quickly compared to other markets. 
     - In the case of Japan, it had relatively successful Covid-19 management early on and reopened cinemas sooner than other regions which could explain their national box office revenue stability.
 <section>
- <h2>
+ <h4>
   The Big Picture 🎥🍿
- </h2>
+ </h4>
 </section>
 Together, these graphs reveal how economies, populations, and history shape the movie industry. Money and history are like the big bosses pulling the strings, while tech acts as the wildcard. Population? Maybe a side character. Emerging markets like Nollywood and K-dramas keep the plot exciting, while Hollywood sticks to its predictable blockbusters. Just like a great film, the industry keeps evolving—and there’s always room for a surprise twist. 🍿
 <section>
- <h4>
+ <h2>
   Exploring how a country's most popular genres relate to film exportation or domestic retention 
- </h4>
+ </h2>
 </section>
 Movies are more than just entertainment – they reveal a lot about what people enjoy watching and how far those stories travel. Some countries embrace their local films, creating a thriving domestic market. Others dominate globally, exporting their films to captivate audiences worldwide. So, what does this mean for genres and revenue? Let’s dive in.
 <div class="container">
